@@ -14,7 +14,8 @@ namespace BrandManagementSystem.Controllers
     [ApiController]
     public class SnapshotController : ControllerBase
     {
-        ISnapshotServices _snapshotServices;
+        private ISnapshotServices _snapshotServices;        
+
         public SnapshotController(ISnapshotServices snapshotServices)
         {
             _snapshotServices = snapshotServices;
