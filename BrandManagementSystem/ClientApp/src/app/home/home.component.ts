@@ -1,22 +1,15 @@
-import { Component,OnInit } from '@angular/core';
-import { BrandsService } from '../Services/brands.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  constructor(private Serviceobj :BrandsService){  }
-  public DataFromservice;
-  ngOnInit()
-  {
-    debugger;
-    this.Serviceobj.GetData().subscribe(dataS=>{
-      this.DataFromservice =dataS;
-    });
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
   }
-  //getDataFromservice()
-  //{
-  //  this.Serviceobj.GetData().subscribe();
- // }
+
 }
